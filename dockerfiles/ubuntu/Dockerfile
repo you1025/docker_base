@@ -1,12 +1,20 @@
 FROM ubuntu:latest
 
+# 非対話型のインストールプロセスを指定
+# tzdata のインストール時に地域を指定させられる事を避ける
+ENV DEBIAN_FRONTEND noninteractive
+
 # パッケージ更新および新規インストール
 RUN apt-get update && \
     apt-get -y install \
     sudo \
+    build-essential \
     git \
     vim \
-    build-essential
+    tzdata
+
+# Timezone の変更
+RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 # ユーザ作成
 RUN useradd -m shimajiro

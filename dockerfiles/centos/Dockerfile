@@ -7,6 +7,9 @@ RUN yum -y update && \
     vim \
     git
 
+# Timezone の変更
+RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
 # ユーザ作成
 RUN useradd -m shimajiro
 RUN echo "shimajiro:shimajiro" | chpasswd
