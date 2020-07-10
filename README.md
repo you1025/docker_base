@@ -18,3 +18,15 @@ $ docker container exec -it -d shimajiro myubuntu /bin/bash
 ```
 $ docker container exec -it -d shimajiro mycentos /bin/bash
 ```
+
+## コンテナ停止
+
+```
+$ docker-compose stop
+```
+
+## コンテナ削除
+
+```
+$ docker-compose down --rmi local
+```
