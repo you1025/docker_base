@@ -24,10 +24,11 @@ RUN echo 'alias ll="ls -l"'  >> /home/shimajiro/.bash_aliases
 RUN echo 'alias la="ls -la"' >> /home/shimajiro/.bash_aliases
 
 # PS1
-RUN echo -e '\nPS1="[\u@myubuntu \W]\$ "' >> /home/shimajiro/.bashrc
+RUN echo '\nPS1="[\u@myubuntu \W]\$ "' >> /home/shimajiro/.bashrc
 
 # vimrc
 COPY ./settings/vimrc /home/shimajiro/.vimrc
 RUN chown shimajiro:shimajiro /home/shimajiro/.vimrc
 
+WORKDIR /home/shimajiro
 CMD ["/bin/bash"]

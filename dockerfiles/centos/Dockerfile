@@ -28,4 +28,5 @@ RUN echo -e '\nPS1="[\u@mycentos \W]\$ "' >> /home/shimajiro/.bashrc
 COPY ./settings/vimrc /home/shimajiro/.vimrc
 RUN chown shimajiro:shimajiro /home/shimajiro/.vimrc
 
+WORKDIR /home/shimajiro
 CMD ["/bin/bash"]
