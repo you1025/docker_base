@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+
+  ubuntu:
+    container_name: myubuntu
+    build:
+      context: .
+      dockerfile: ./dockerfiles/ubuntu/Dockerfile
+    tty: true
+
+  centos:
+    container_name: mycentos
+    build:
+      context: .
+      dockerfile: ./dockerfiles/centos/Dockerfile
+    tty: true
