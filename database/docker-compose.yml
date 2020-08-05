@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+
+  mysql:
+    container_name: mymysql
+    build:
+      context: .
+      dockerfile: ./dockerfiles/mysql/Dockerfile
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: shimajiro
+      MYSQL_PASSWORD: shimajiro
+      TZ: Asia/Tokyo
+
