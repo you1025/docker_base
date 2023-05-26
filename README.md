@@ -10,13 +10,13 @@ $ docker-compose up -d
 ### Ubuntu
 
 ```
-$ docker container exec -it -d shimajiro myubuntu /bin/bash
+$ docker container exec -it -u shimajiro myubuntu /bin/bash
 ```
 
 ### Centos
 
 ```
-$ docker container exec -it -d shimajiro mycentos /bin/bash
+$ docker container exec -it -u shimajiro mycentos /bin/bash
 ```
 
 ## コンテナ停止
