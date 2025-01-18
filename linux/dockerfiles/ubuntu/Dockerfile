@@ -26,11 +26,8 @@ RUN gpasswd -a ${USER_NAME} sudo
 RUN echo "Set disable_coredump false" >> /etc/sudo.conf
 
 # alias
-RUN touch /home/${USER_NAME}/.bash_aliases
+COPY ./settings/bash_aliases /home/${USER_NAME}/.bash_aliases
 RUN chown ${USER_NAME}:${USER_NAME} /home/${USER_NAME}/.bash_aliases
-RUN echo 'alias ..="cd .."'  >> /home/shimajiro/.bash_aliases
-RUN echo 'alias ll="ls -l"'  >> /home/shimajiro/.bash_aliases
-RUN echo 'alias la="ls -la"' >> /home/shimajiro/.bash_aliases
 
 # PS1
 RUN echo '\nPS1="[\u@myubuntu \W]\$ "' >> /home/${USER_NAME}/.bashrc
