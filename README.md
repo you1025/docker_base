@@ -1,5 +1,7 @@
 # 自分用 Docker サンプル
 
+CentOS の終了により対象外とする(2025.01.18)
+
 ## コンテナ作成&起動
 ```
 $ docker-compose up -d
@@ -11,12 +13,6 @@ $ docker-compose up -d
 
 ```
 $ docker container exec -it -u shimajiro myubuntu /bin/bash
-```
-
-### Centos
-
-```
-$ docker container exec -it -u shimajiro mycentos /bin/bash
 ```
 
 ## コンテナ停止
