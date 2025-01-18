@@ -9,9 +9,3 @@ services:
       dockerfile: ./dockerfiles/ubuntu/Dockerfile
     tty: true
 
-  centos:
-    container_name: mycentos
-    build:
-      context: .
-      dockerfile: ./dockerfiles/centos/Dockerfile
-    tty: true
